@@ -12,7 +12,6 @@ const VideoBackground = ({ movieId }) => {
       options
     );
     const data = await respons.json();
-    console.log(data);
     const filterData = data.results.filter((video) => video.type === "Trailer");
     const trailer = filterData.length ? filterData[0] : data.results[0];
     setTrailerId(trailer.key);
